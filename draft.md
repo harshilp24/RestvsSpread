@@ -16,16 +16,17 @@ The rest operator is used to put a JavaScript array with the rest of some user-s
 -   It allows us to handle a variety of inputs as arguments in a function easily. We can specify an indefinite number of arguments as an array using the rest parameter.
     
 
-Objects can also be used with the rest operator, but only if they already implement the interface for spreading (i.e., Array). The rest operator is very handy when dealing with arrays and objects. It allows you to perform complex operations in one line of code, rather than having to write numerous lines of code just to iterate over the array. Now, let's have a look at how Rest Operators work.
+Objects can also be used with the rest operator, but only if they already implement the interface for spreading (i.e., Array). **The rest operator is very handy when dealing with arrays and objects**. It allows you to perform complex operations in one line of code, rather than having to write numerous lines of code just to iterate over the array. To better understand, let's have a look at how Rest Operators work.
 
   
   
 
 ## How does the Rest Parameter work?
 
-Rest is used as a prefix to the function's last parameter in JavaScript functions. Let’s see an example to understand Rest Operator.
+Rest Parameter is used as a prefix to the function's last parameter in JavaScript functions. Let’s see an example to understand Rest Operator.
 
 ```js
+//without rest
 function  sum(a,b){
 console.log(a+b);
 }
@@ -64,7 +65,7 @@ console.log(otherval);
 // It will return
 ['Designer', 'UI/UX', 'Tech Lead']
 ```
-The rest operator (...) tells the system to fill an array with the rest of the user-supplied data. The array is then assigned to the ```otherval``` variable. As a result,```...otherval``` can be considered a rest variable.
+The rest operator (...) tells the system to fill an array with the rest of the user-supplied data. The array is then assigned to the ```otherval``` variable. As a result,```...otherval``` will be considered a rest variable.
 
 ### What's the Difference Between Arguments and Rest Parameters?
 - Arguments can be assigned to a variable or passed into a function.
@@ -90,6 +91,7 @@ Spread is mainly used for unpacking arrays into their members, but can also be u
 ## How does the Spread Operator work?
   
   ```js
+ //without spread
 function  lognames(name1,name2,name3){
 console.log(name1,name2,name3);
 }
@@ -115,7 +117,7 @@ lognames(...names)
 
 ### Let's have a look at some of the ways spread may be used:
 #### Adding array elements to an existing array
-Unlike rest parameters, the spread operator can be used as the first input. It, if you want to add an element to the end of your array, you could do so as follows:
+Unlike rest parameters, the spread operator can be used as the first input. If you want to add an element to the end of your array, you could do so as follows:
 ```js
 const  info = ["My", "Name", "is"];
 const  aboutMe = ["Hello,", ...info, "Harshil."];
@@ -123,7 +125,7 @@ const  aboutMe = ["Hello,", ...info, "Harshil."];
 console.log(aboutMe);
 //returns - > ['Hello,', 'My', 'Name', 'is', 'Harshil.']
 ```
-As a result, the spread operator simply copied and pasted the content of info into aboutMe, leaving no connection to the original array.
+As a result, the spread operator simply copied and pasted the content of  ```info ``` into  ```aboutMe ```, leaving no connection to the original array.
 
 #### Converting a String into Individual Array Items Using Spread
 
@@ -136,7 +138,7 @@ console.log([...name]);
 ```
 #### Using Spread in a Function Call
 
-We would use the spread operator if we had an array that we wished to send as a list of arguments to a function. Let's put our add method to use again.
+We can use the spread operator if we had an array that we wished to send as a list of arguments to a function. Let's put our  ```add ``` method to use again.
 ```js
 function  add(a, b, c) {
 return  a + b + c ;
@@ -145,14 +147,13 @@ const  args = [1, 2, 3];
 console.log(add(...args));
 //returns - > 6
 ```
-Note : Assume the numbers array has more than four elements. The system will only utilise the first four items as ```add()``` arguments in this scenario and disregard the rest.
+Note : If the numbers array has more than four elements. The system will only utilise the first four items as ```add()``` arguments in this scenario and disregard the rest.
 
 #### Copying arrays
-To copy an array, we can you the spread operator in following ways :
+To copy an array, we can use the spread operator in following ways :
 ```js
 const  arr1 = [1, 2, 3];
 const  arr2 = [...arr1];
-
 
 console.log(arr2);
 ```
