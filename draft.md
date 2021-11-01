@@ -184,7 +184,7 @@ console.log(about);
 
 ## Wrapping it up
 
-```... ``` might stand for both a spread operator and a rest parameter. How can we detect the difference between the two? Well, that depends on how we use it. It's simple to discern whether you are using the three dots as a rest parameter or a spread operator based on the context.
+```... ``` might stand for both a spread operator and a rest parameter. How can you detect the difference between the two? Well, that depends on how you use it. It's simple to discern whether you are using the three dots as a rest parameter or a spread operator based on the context.
 
 I hope that this article clarifies the spread operator and rest parameter. In addition, we saw examples and use cases of how to use each operator. Thanks for reading, Happy Coding!
 
